@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreador de Nieve | Estado de las Estaciones en Vivo</title>
+    <meta name="description"
+        content="Consulta en tiempo real el estado de la nieve, nevadas y el tiempo en las principales estaciones de esquí de España.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hero">
+        <img src="ski_resort_panorama_1772181685731.png" alt="Montañas Nevadas" class="hero-bg" id="hero-img">
+        <div class="hero-content">
+            <h1>España en Nieve</h1>
+            <p>Estado de la nieve en tiempo real para las principales estaciones españolas, desde los Pirineos hasta
+                Sierra Nevada.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="loader" class="loader">
+            <div class="spinner"></div>
+        </div>
+        <div id="dashboard" class="dashboard-grid" style="display: none;">
+            <!-- Resort cards will be injected here -->
+        </div>
+    </main>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <div id="modal-body">
+                <!-- Se inyectará el pronóstico aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
